@@ -1,0 +1,70 @@
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: url("background.jpg") no-repeat center center fixed;
+        background-size: cover;
+        color: #fff;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1, h2 {
+        text-align: center;
+    }
+
+    table {
+        width: 80%;
+        margin: 20px auto;
+        background: rgba(255,255,255,0.9);
+        color: #000;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+
+    th {
+        background-color: #005266;
+        color: white;
+    }
+
+    input, select {
+        padding: 10px;
+        width: 100%;
+        margin: 10px 0;
+        border-radius: 5px;
+    }
+
+    form {
+        width: 300px;
+        margin: 20px auto;
+        padding: 20px;
+        background: rgba(255,255,255,0.8);
+        border-radius: 10px;
+    }
+
+    a, button, input[type=submit] {
+        background: #0043a7;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    a:hover, button:hover {
+        background: #0077d9;
+    }
+
+    .message-box {
+        width: 400px;
+        margin: 100px auto;
+        background: rgba(0,0,0,0.7);
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+    }
+</style>
