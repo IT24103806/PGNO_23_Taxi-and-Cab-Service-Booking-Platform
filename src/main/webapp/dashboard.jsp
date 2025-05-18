@@ -141,7 +141,7 @@
     }
 </style>
 
-<%@ page import="javax.servlet.http.HttpSession" %>
+<%@ page import="jakarta.servlet.http.HttpSession" %>
 <%
     session = request.getSession(false);
     String username = (session != null) ? (String) session.getAttribute("userName") : null;
