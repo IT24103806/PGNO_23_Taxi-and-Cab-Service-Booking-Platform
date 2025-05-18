@@ -62,6 +62,26 @@
             width: 100%;
             cursor: pointer;
         }
+
+        .link-group {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        a.btn {
+            display: inline-block;
+            margin: 5px 10px;
+            padding: 10px 20px;
+            background-color: #6c757d;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+        a.btn:hover {
+            background-color: #5a6268;
+        }
+
     </style>
 </head>
 <body>
@@ -89,6 +109,12 @@
 
         <input type="submit" value="Submit Review">
     </form>
+
+    <div class="link-group">
+        <a href="viewReviews.jsp" class="btn">View All Reviews</a>
+        <a href="adminDashboard.jsp" class="btn">Back to Dashboard</a>
+    </div>
+
 </div>
 </body>
 </html>
