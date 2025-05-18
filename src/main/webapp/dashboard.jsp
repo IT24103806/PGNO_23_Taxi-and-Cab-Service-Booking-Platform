@@ -1,0 +1,93 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
+<%@ page import="javax.servlet.http.HttpSession" %>
+<%
+    session = request.getSession(false);
+    String email = (session != null) ? (String) session.getAttribute("userEmail") : null;
+    String name = (session != null) ? (String) session.getAttribute("userName") : null;
+
+    if (email == null) {
+        response.sendRedirect("login.jsp");
+        return;
+    }
+%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url("backgroundImage2.png") no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .profile-icon {
+            position: absolute;
+            top: 80px;
+            right: 30px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #005AA7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            transition: background-color 0.3s ease;
+            z-index: 10;
+        }
+
+        .profile-icon:hover {
+            background-color: #0074D9;
+        }
+
+        .dashboard-content {
+            text-align: center;
+            margin-top: 150px;
+        }
+
+        .dashboard-content a {
+            background-color: #005AA7;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .dashboard-content a:hover {
+            background-color: #0074D9;
+        }
+
+        .welcome-message {
+            color: #ffffff;
+            text-align: center;
+            margin-top: 100px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<jsp:include page="header.jsp" />
+
+<jsp:include page="footer.jsp" />
+
+</body>
+</html>
