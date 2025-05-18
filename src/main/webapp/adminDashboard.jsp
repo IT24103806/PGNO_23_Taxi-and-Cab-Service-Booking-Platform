@@ -1,4 +1,5 @@
 <!--Ravindu Nethmina IT24104176 -->
+/*this uis randy*/
 <style>
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -9,6 +10,7 @@
         margin: 0;
         padding: 20px;
     }
+
     body::before {
         content: "";
         position: fixed;
