@@ -1,3 +1,27 @@
+<%@ page import="java.io.*, java.util.*" %>
+<%
+    String userID = request.getParameter("userID");
+    String driverID = request.getParameter("driverID");
+    String rating = request.getParameter("rating");
+    String comments = request.getParameter("comments");
+
+    String path = "D:/reviews/reviews.txt";
+    File file = new File(path);
+    file.getParentFile().mkdirs();
+
+    FileWriter fw = new FileWriter(file, true);
+    PrintWriter pw = new PrintWriter(fw);
+
+    pw.println("UserID: " + userID);
+    pw.println("DriverID: " + driverID);
+    pw.println("Rating: " + rating);
+    pw.println("Comments: " + comments);
+    pw.println("Date: " + new Date().toString());
+    pw.println("-----");
+
+    pw.close();
+%>
+
 <html>
 <head>
     <title>Review Submitted</title>
