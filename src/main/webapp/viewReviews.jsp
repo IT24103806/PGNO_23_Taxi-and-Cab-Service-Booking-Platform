@@ -1,7 +1,96 @@
+<%@ page import="java.io.*" %>
 <html>
  <head>
     <title>All Reviews</title>
-    <style>
+   <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url("AdminDashboard.jpg") no-repeat center center fixed;
+            background-size: cover;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 70%;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 60px;
+        }
+
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .review-card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px 25px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+            box-sizing: border-box;
+            flex: 0 0 48%;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .review-meta {
+            font-size: 14px;
+            color: #777;
+        }
+
+        .review-rating {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .review-rating span {
+            font-size: 20px;
+            margin-right: 2px;
+        }
+
+        .review-comments {
+            font-size: 18px;
+            color: #333;
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+
+        .link-group {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        a.btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #6c757d;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 5px 10px;
+        }
+
+        a.btn:hover {
+            background-color: #5a6268;
+        }
+
+        @media (max-width: 768px) {
+            .review-card {
+                flex: 0 0 100%;
+            }
+        }
     </style>
  </head>
  <body>
