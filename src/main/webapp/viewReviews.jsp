@@ -1,8 +1,8 @@
 <%@ page import="java.io.*" %>
 <html>
- <head>
+<head>
     <title>All Reviews</title>
-   <style>
+    <style>
         body {
             font-family: Arial, sans-serif;
             background: url("AdminDashboard.jpg") no-repeat center center fixed;
@@ -96,9 +96,8 @@
             }
         }
     </style>
- </head>
- <body>
-
+</head>
+<body>
 <div class="container">
     <h2>All Submitted Reviews</h2>
 
@@ -176,7 +175,5 @@
         <a href="adminDashboard.jsp" class="btn">Back to Dashboard</a>
     </div>
 </div>
-
- </body>
-</html> 
-  
+</body>
+</html>
