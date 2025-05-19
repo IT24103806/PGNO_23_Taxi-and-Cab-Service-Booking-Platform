@@ -60,7 +60,7 @@ public class LoginServlet extends HttpServlet {
                 response.sendRedirect("dashboard.jsp");
             }
         } else {
-            // Pass the error message to the JSP
+            
             request.setAttribute("errorMessage", "Invalid email or password!");
             request.getRequestDispatcher("login.jsp").forward(request, response);
         }
