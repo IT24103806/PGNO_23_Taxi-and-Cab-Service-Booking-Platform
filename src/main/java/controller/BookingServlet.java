@@ -16,11 +16,17 @@ public class BookingServlet extends HttpServlet {
 
         if (customerId != null && pickup != null && drop != null && cabType != null && time != null) {
             String bookingId = "B" + System.currentTimeMillis();
-            String bookingData = bookingId + "," + customerId + ",-," + pickup + "," + drop + "," + cabType + "," + time + "\n";
+            String bookingData = bookingId + "," + customerId + ",-," + pickup + "," + drop + "," + cabType + "," + time;
 
-            FileWriter writer = new FileWriter("bookings.txt", true);
-            writer.write(bookingData);
-            writer.close();
+            String path = getServletContext().getRealPath("/data/bookings.txt");
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(path, true))) {
+                writer.write(bookingData);
+                writer.newLine();
+            } catch (IOException e) {
+                e.printStackTrace();
+                response.sendRedirect("error.jsp");
+                return;
+            }
 
             response.sendRedirect("success.jsp");
         } else {

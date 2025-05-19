@@ -387,22 +387,23 @@
     </div>
 
     <%
-        File file = new File(application.getRealPath("/users.txt"));
+        File file = new File(System.getProperty("user.dir") + File.separator + "data" + File.separator + "users.txt");
         List<String[]> users = new ArrayList<>();
         String searchQuery = request.getParameter("search");
 
         if (file.exists()) {
             Scanner scanner = new Scanner(file);
-
             while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
-                String[] userData = line.split(",");
-                if (userData.length >= 5) {
-                    if (searchQuery == null || searchQuery.isEmpty() ||
-                            userData[0].toLowerCase().contains(searchQuery.toLowerCase()) ||
-                            userData[1].toLowerCase().contains(searchQuery.toLowerCase()) ||
-                            userData[2].toLowerCase().contains(searchQuery.toLowerCase())) {
-                        users.add(userData);
+                String line = scanner.nextLine().trim();
+                if (!line.isEmpty()) {
+                    String[] userData = line.split(",");
+                    if (userData.length >= 10) {
+                        if (searchQuery == null || searchQuery.isEmpty() ||
+                                userData[0].toLowerCase().contains(searchQuery.toLowerCase()) ||
+                                userData[1].toLowerCase().contains(searchQuery.toLowerCase()) ||
+                                userData[2].toLowerCase().contains(searchQuery.toLowerCase())) {
+                            users.add(userData);
+                        }
                     }
                 }
             }

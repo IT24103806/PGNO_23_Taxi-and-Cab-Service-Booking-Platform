@@ -1,7 +1,7 @@
 <style>
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: url("background.jpg") no-repeat center center fixed;
+        background: url("BackgroundImage3.png") no-repeat center center fixed;
         background-size: cover;
         color: #333;
         margin: 0;
@@ -73,29 +73,32 @@
 <h2>All Cab Bookings</h2>
 <table border="1">
 <tr><th>Booking ID</th><th>Customer ID</th><th>Driver ID</th><th>Pickup</th><th>Drop</th><th>Cab Type</th><th>Time</th></tr>
-<%
-    File file = new File("bookings.txt");
-    if (file.exists()) {
-        Scanner scanner = new Scanner(file);
-        while (scanner.hasNextLine()) {
-            String[] data = scanner.nextLine().split(",");
-            if (data.length >= 7) {
-%>
-<tr>
-    <td><%= data[0] %></td>
-    <td><%= data[1] %></td>
-    <td><%= data[2] %></td>
-    <td><%= data[3] %></td>
-    <td><%= data[4] %></td>
-    <td><%= data[5] %></td>
-    <td><%= data[6] %></td>
-</tr>
-<%
+    <%
+        File file = new File(application.getRealPath("/data/bookings.txt"));
+        if (file.exists()) {
+            Scanner scanner = new Scanner(file);
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine().trim();
+                if (!line.isEmpty()) {
+                    String[] data = line.split(",");
+                    if (data.length >= 7) {
+    %>
+    <tr>
+        <td><%= data[0] %></td>
+        <td><%= data[1] %></td>
+        <td><%= data[2] %></td>
+        <td><%= data[3] %></td>
+        <td><%= data[4] %></td>
+        <td><%= data[5] %></td>
+        <td><%= data[6] %></td>
+    </tr>
+    <%
+                    }
+                }
             }
+            scanner.close();
         }
-        scanner.close();
-    }
-%>
+    %>
 </table>
 </body>
 </html>

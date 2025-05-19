@@ -19,27 +19,25 @@ public class RegisterServlet extends HttpServlet {
         String role = request.getParameter("role");
 
         HttpSession session = request.getSession();
-        String loggedInUserRole = (String) session.getAttribute("userRole");
-
-
 
         if (name != null && email != null && password != null &&
                 houseNo != null && street != null && city != null &&
                 dob != null && gender != null && role != null) {
 
-            // Generate unique user ID
             String id = "U" + System.currentTimeMillis();
-
-            // Compose user data string with address components separated
             String userData = id + "," + name + "," + email + "," + password + "," +
-                    houseNo + "," + street + "," + city + "," + dob + "," + gender + "," + role + "\n";
+                    houseNo + "," + street + "," + city + "," + dob + "," + gender + "," + role;
 
-            // Write to file (append mode)
-            FileWriter writer = new FileWriter("users.txt", true);
-            writer.write(userData);
-            writer.close();
+            String path = getServletContext().getRealPath("/data/users.txt");
+            try (BufferedWriter fw = new BufferedWriter(new FileWriter(path, true))) {
+                fw.write(userData);
+                fw.newLine();
+            } catch (IOException e) {
+                e.printStackTrace();
+                response.sendRedirect("error.jsp");
+                return;
+            }
 
-            // Store values in session
             session.setAttribute("userId", id);
             session.setAttribute("userName", name);
             session.setAttribute("userEmail", email);
@@ -50,7 +48,6 @@ public class RegisterServlet extends HttpServlet {
             session.setAttribute("userDOB", dob);
             session.setAttribute("userGender", gender);
 
-            // Redirect to success page
             response.sendRedirect("success.jsp");
         } else {
             response.sendRedirect("error.jsp");

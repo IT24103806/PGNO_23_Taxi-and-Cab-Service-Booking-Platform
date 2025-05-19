@@ -1,0 +1,9 @@
+U1746183724540,Peiris P.V.T.D,it24103806@my.sliit.lk,it24103806,admin
+U1746690652172,fiyk,ljuvfyjcmhvg@gcf.mn,fyjfjfj,customer
+U1747376067350,fjaebfhabef,diadvfugyugfh@gmail.com,123456,admin
+U1747478526479,Dinelka Peiris,dinelkapeiris4@gmail.com,dinelka123,394/2,Mabima,Heiyanthuduwa,2003-11-28,Male,customer
+U1747478526480,Peiris P.V.T.D.,it24103806@my.sliit.lk,it24103806,394/2,Mabima,Heiyanthuduwa,2003-11-28,Male,admin
+U1747656779904,Dinelka,dinelkapeiris4@gmail.com,dinelka123,394/2,mabima,biyagama,2003-03-31,Male,customer
+U1747661249889,Dinelka,dinelkapeiris4@gmail.com,dinelka123,23,aefjbfh,kjfhadf,2003-06-05,Male,customer
+U1747673792492,Inudi Minodma,inudiminodma4@gmail.com,inudu123,56/2,biyagama road,biyagama,2003-08-08,Female,driver
+U1747673888440,Dinelka Peiris,dinelkapeiris4@gmail.com,dinelka123,234,sdf,df,2003-11-28,Male,customer
