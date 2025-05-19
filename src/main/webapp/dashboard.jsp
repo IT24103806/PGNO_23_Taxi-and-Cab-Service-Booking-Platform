@@ -1,4 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" %>
 <%@ page import="javax.servlet.http.HttpSession" %>
 <%
     session = request.getSession(false);
@@ -17,21 +16,20 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: url("backgroundImage2.png") no-repeat center center fixed;
+            background: url("backgroundImage1.png") no-repeat center center fixed;
             background-size: cover;
-            color: #333;
             margin: 0;
             padding: 0;
         }
 
-        h1, h2 {
+        h2, h1 {
             text-align: center;
             color: #ffffff;
         }
 
         .profile-icon {
             position: absolute;
-            top: 80px;
+            top: 80px; /* adjusted below header */
             right: 30px;
             width: 40px;
             height: 40px;
@@ -74,19 +72,20 @@
         .dashboard-content a:hover {
             background-color: #0074D9;
         }
-
-        .welcome-message {
-            color: #ffffff;
-            text-align: center;
-            margin-top: 100px;
-            font-size: 20px;
-        }
     </style>
 </head>
 <body>
 
+<!-- ✅ Include header -->
 <jsp:include page="header.jsp" />
 
+
+<div class="dashboard-content">
+    <h1>Welcome to Your Dashboard</h1>
+    <a href="booking.jsp">Book a Cab</a>
+</div>
+
+<!-- ✅ Include footer -->
 <jsp:include page="footer.jsp" />
 
 </body>
