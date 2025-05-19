@@ -30,16 +30,16 @@ public class RegisterServlet extends HttpServlet {
 
             String id = "U" + System.currentTimeMillis();
 
-            // Compose user data string with address components separated
+            
             String userData = id + "," + name + "," + email + "," + password + "," +
                     houseNo + "," + street + "," + city + "," + dob + "," + gender + "," + role + "\n";
 
-            // Write to file (append mode)
+            
             FileWriter writer = new FileWriter("users.txt", true);
             writer.write(userData);
             writer.close();
 
-            // Store values in session
+            
             session.setAttribute("userId", id);
             session.setAttribute("userName", name);
             session.setAttribute("userEmail", email);
@@ -50,7 +50,7 @@ public class RegisterServlet extends HttpServlet {
             session.setAttribute("userDOB", dob);
             session.setAttribute("userGender", gender);
 
-            // Redirect to success page
+            
             response.sendRedirect("success.jsp");
         } else {
             response.sendRedirect("error.jsp");
