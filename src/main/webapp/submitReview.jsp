@@ -81,7 +81,6 @@
         a.btn:hover {
             background-color: #5a6268;
         }
-
     </style>
 </head>
 <body>
@@ -97,24 +96,24 @@
         <label for="rating">Rating:</label>
         <select name="rating" id="rating" required>
             <option value="">--Select Rating--</option>
-            <option value="1">Very Bad</option>
-            <option value="2">Bad</option>
-            <option value="3">Average</option>
-            <option value="4">Good</option>
-            <option value="5">Excellent</option>
+            <option value="1">1 - Very Bad</option>
+            <option value="2">2 - Bad</option>
+            <option value="3">3 - Average</option>
+            <option value="4">4 - Good</option>
+            <option value="5">5 - Excellent</option>
         </select>
 
         <label for="comments">Comments:</label>
-        <textarea name="comments" id="comments" rows="4" required></textarea>
+        <textarea name="comments" id="comments" rows="4" placeholder="Enter your comments here" required></textarea>
 
         <input type="submit" value="Submit Review">
+        <input type="reset" value="Reset">
     </form>
 
     <div class="link-group">
         <a href="viewReviews.jsp" class="btn">View All Reviews</a>
         <a href="adminDashboard.jsp" class="btn">Back to Dashboard</a>
     </div>
-
 </div>
 </body>
 </html>
