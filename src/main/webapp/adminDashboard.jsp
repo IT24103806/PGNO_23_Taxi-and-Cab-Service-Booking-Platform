@@ -1,5 +1,3 @@
-<!--Ravindu Nethmina IT24104176 -->
-/*this uis randy*/
 <style>
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -10,7 +8,6 @@
         margin: 0;
         padding: 20px;
     }
-
     body::before {
         content: "";
         position: fixed;
@@ -139,7 +136,7 @@
 </style>
 
 
-<%@ page import="jakarta.servlet.http.HttpSession" %>
+<%@ page import="javax.servlet.http.HttpSession" %>
 <%
     session = request.getSession(false);
     String role = (String) session.getAttribute("userRole");
