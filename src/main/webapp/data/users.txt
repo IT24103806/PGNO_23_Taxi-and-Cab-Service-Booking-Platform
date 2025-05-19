@@ -7,3 +7,4 @@ U1747656779904,Dinelka,dinelkapeiris4@gmail.com,dinelka123,394/2,mabima,biyagama
 U1747661249889,Dinelka,dinelkapeiris4@gmail.com,dinelka123,23,aefjbfh,kjfhadf,2003-06-05,Male,customer
 U1747673792492,Inudi Minodma,inudiminodma4@gmail.com,inudu123,56/2,biyagama road,biyagama,2003-08-08,Female,driver
 U1747673888440,Dinelka Peiris,dinelkapeiris4@gmail.com,dinelka123,234,sdf,df,2003-11-28,Male,customer
+U1747673888449,Nethmina Appuhamy,ravindunethmina067@gmail.com,randy123,99999,2004-08-16,Male,Admin
