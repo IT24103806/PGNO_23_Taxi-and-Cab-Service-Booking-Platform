@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="PGNO_23_Taxi-and-Cab-Service-Booking-Platform-IT24103807:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/PGNO_23_Taxi_and_Cab_Service_Booking_Platform_IT24103807_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="PGNO_23_Taxi-and-Cab-Service-Booking-Platform-IT24103807" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="PGNO_23_Taxi-and-Cab-Service-Booking-Platform-IT24103807/web/Web" />
+    </root>
+  </artifact>
+</component>
