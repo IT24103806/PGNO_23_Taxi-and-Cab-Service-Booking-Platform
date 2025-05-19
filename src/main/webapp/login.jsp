@@ -1,12 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
-<%@ page import="java.lang.String" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <style>
         * {
             box-sizing: border-box;
@@ -19,14 +17,18 @@
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
             url('login.jpg') no-repeat center center fixed;
             background-size: cover;
+        }
+
+        .login-wrapper {
             display: flex;
-            align-items: center;
             justify-content: center;
-            min-height: 100vh;
+            align-items: center;
+            min-height: calc(100vh - 100px); /* adjust if header height is different */
+            padding-top: 50px;
         }
 
         .login-container {
-            background: rgba(255, 255, 255, 0.95);
+            background: #ffffff;
             padding: 40px 30px;
             border-radius: 12px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.3);
@@ -37,7 +39,7 @@
         .login-container h2 {
             text-align: center;
             margin-bottom: 25px;
-            color: #003366;
+            color: #222;
         }
 
         .form-group {
@@ -51,7 +53,6 @@
         }
 
         input[type="email"],
-        input[type="text"],
         input[type="password"] {
             width: 100%;
             padding: 10px 12px;
@@ -94,9 +95,10 @@
     </style>
 
     <script type="text/javascript">
+        // Show popup alert if errorMessage exists
         <% String errorMessage = (String) request.getAttribute("errorMessage"); %>
         <% if (errorMessage != null) { %>
-        window.onload = function () {
+        window.onload = function() {
             alert("<%= errorMessage %>");
         };
         <% } %>
@@ -106,23 +108,25 @@
 
 <%@ include file="header.jsp" %>
 
-<div class="login-container">
-    <h2>Welcome Back</h2>
-    <form action="LoginServlet" method="post" autocomplete="off">
-        <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required placeholder="Enter your email" autocomplete="username">
-        </div>
+<div class="login-wrapper">
+    <div class="login-container">
+        <h2>Welcome Back</h2>
+        <form action="LoginServlet" method="post" autocomplete="off">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email" autocomplete="username">
+            </div>
 
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required placeholder="Enter your password" autocomplete="current-password">
-        </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password" autocomplete="current-password">
+            </div>
 
-        <input type="submit" value="Log In">
-    </form>
-    <div class="footer-text">
-        Don't have an account? <a href="register.jsp">Register here</a>
+            <input type="submit" value="Log In">
+        </form>
+        <div class="footer-text">
+            Don't have an account? <a href="register.jsp">Register here</a>
+        </div>
     </div>
 </div>
 
