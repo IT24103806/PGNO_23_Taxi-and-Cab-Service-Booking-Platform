@@ -16,9 +16,13 @@
         }
 
         h2 {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            margin: 0 auto 30px auto;
             text-align: center;
-            color: #333;
-            margin-bottom: 60px;
+            width: 60%;
+            border-radius: 50px;
         }
 
         .card-grid {
