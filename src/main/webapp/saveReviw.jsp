@@ -21,12 +21,10 @@
 
     pw.close();
 %>
-
 <html>
 <head>
     <title>Review Submitted</title>
     <style>
-
         body {
             font-family: Arial, sans-serif;
             background: url("AdminDashboard.jpg") no-repeat center center fixed;
@@ -58,13 +56,12 @@
         .btn:hover {
             background-color: #0056b3;
         }
-
     </style>
 </head>
 <body>
-    <h2>Review Submitted Successfully!</h2>
-    <a href="submitReview.jsp" class="btn">Submit Another Review</a>
-    <a href="viewReviews.jsp" class="btn">Vew All Reviews</a>
-    <a href="adminDashboard.jsp" class="btn">Back to Dashboard</a>
+<h2>Review Submitted Successfully!</h2>
+<a href="submitReview.jsp" class="btn">Submit Another Review</a>
+<a href="viewReviews.jsp" class="btn">Vew All Reviews</a>
+<a href="adminDashboard.jsp" class="btn">Back to Dashboard</a>
 </body>
 </html>
