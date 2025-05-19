@@ -10,7 +10,7 @@ public class Customer extends User {
     public void setContact(String contact) { this.contact = contact; }
 
     @Override
-    public void ) {
+    public void displayInfo() {
         System.out.println("Customer: " + name + " | Contact: " + contact);
     }
 }
