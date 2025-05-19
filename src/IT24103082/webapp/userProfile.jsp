@@ -162,8 +162,7 @@
             <div class="label">Role:</div>
             <div class="value"><%= role %></div>
         </div>
-
-        <a class="back-link" href="dashboard.jsp"> Back to Dashboard</a>
+<a class="back-link" href="<%= "admin".equalsIgnoreCase(role) ? "adminDashboard.jsp" : "dashboard.jsp" %>"> Back to Dashboard</a>
     </div>
 </div>
 
