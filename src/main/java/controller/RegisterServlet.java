@@ -18,20 +18,28 @@ public class RegisterServlet extends HttpServlet {
         String gender = request.getParameter("gender");
         String role = request.getParameter("role");
 
-        if (name != null && email != null && password != null &&
-                role != null && houseNo != null && street != null &&
-                city != null && dob != null && gender != null) {
+        HttpSession session = request.getSession();
+        String loggedInUserRole = (String) session.getAttribute("userRole");
 
+
+
+        if (name != null && email != null && password != null &&
+                houseNo != null && street != null && city != null &&
+                dob != null && gender != null && role != null) {
+
+            // Generate unique user ID
             String id = "U" + System.currentTimeMillis();
 
+            // Compose user data string with address components separated
             String userData = id + "," + name + "," + email + "," + password + "," +
                     houseNo + "," + street + "," + city + "," + dob + "," + gender + "," + role + "\n";
 
+            // Write to file (append mode)
             FileWriter writer = new FileWriter("users.txt", true);
             writer.write(userData);
             writer.close();
 
-            HttpSession session = request.getSession();
+            // Store values in session
             session.setAttribute("userId", id);
             session.setAttribute("userName", name);
             session.setAttribute("userEmail", email);
@@ -42,6 +50,7 @@ public class RegisterServlet extends HttpServlet {
             session.setAttribute("userDOB", dob);
             session.setAttribute("userGender", gender);
 
+            // Redirect to success page
             response.sendRedirect("success.jsp");
         } else {
             response.sendRedirect("error.jsp");

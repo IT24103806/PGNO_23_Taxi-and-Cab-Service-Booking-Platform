@@ -3,10 +3,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swift Rides - User Management</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
             --primary-color: #1a3c6e;
@@ -61,31 +57,6 @@
             margin-top: -5px;
         }
 
-        /* Login Section */
-        .login-section {
-            text-align: right;
-        }
-
-        .login-text {
-            font-size: 14px;
-            margin-bottom: 5px;
-        }
-
-        .login-btn {
-            background-color: var(--secondary-color);
-            color: var(--dark-color);
-            font-weight: bold;
-            padding: 8px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-left: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .login-btn:hover {
-            background-color: #e69c22;
-            transform: translateY(-2px);
-        }
 
         /* Navigation Bar */
         .navbar {
@@ -391,11 +362,6 @@
             <div class="subheading">Premium Cab Service</div>
         </div>
     </div>
-    <div class="login-section">
-        <div class="login-text">LOG IN USING YOUR ACCOUNT ON:</div>
-        <a href="login.jsp" class="login-btn">Login</a>
-        <a href="register.jsp" class="login-btn">Register</a>
-    </div>
 </div>
 
 <!-- Navigation Bar -->
@@ -421,7 +387,7 @@
     </div>
 
     <%
-        File file = new File("users.txt");
+        File file = new File(application.getRealPath("/users.txt"));
         List<String[]> users = new ArrayList<>();
         String searchQuery = request.getParameter("search");
 
@@ -443,6 +409,7 @@
             scanner.close();
         }
     %>
+
 
     <% if (users.isEmpty()) { %>
     <div class="empty-state">
