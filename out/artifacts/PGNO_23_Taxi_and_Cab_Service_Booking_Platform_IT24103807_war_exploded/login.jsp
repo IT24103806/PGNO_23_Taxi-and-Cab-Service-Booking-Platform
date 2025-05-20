@@ -17,7 +17,7 @@
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-            url('login.jpg') no-repeat center center fixed;
+            url('backgroundImage2.png') no-repeat center center fixed;
             background-size: cover;
             display: flex;
             align-items: center;
